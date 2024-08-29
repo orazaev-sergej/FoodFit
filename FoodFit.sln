@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodFit", "FoodFit.csproj", "{EB10C593-9B95-4614-8D55-4E5E3343833A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB10C593-9B95-4614-8D55-4E5E3343833A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB10C593-9B95-4614-8D55-4E5E3343833A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB10C593-9B95-4614-8D55-4E5E3343833A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB10C593-9B95-4614-8D55-4E5E3343833A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB1B5CD4-7112-47FE-BAE3-61E25E77B3DA}
+	EndGlobalSection
+EndGlobal
