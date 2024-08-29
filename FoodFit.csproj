@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\FoodData.cs" />
+    <Compile Include="Classes\UserInput.cs" />
     <Compile Include="Interfaces\ICalorieCalculator.cs" />
     <Compile Include="Interfaces\IDataStorage.cs" />
     <Compile Include="Interfaces\IFoodData.cs" />
