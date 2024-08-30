@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FoodFit.Interfaces
 {
-    internal interface IDataStorage
+    public interface IDataStorage
     {
         void SaveFoodData(IEnumerable<IFoodData> foods);
         IEnumerable<IFoodData> GetFoodData();

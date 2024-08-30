@@ -1,8 +1,9 @@
-﻿using FoodFit.Interfaces;
+﻿
+using FoodFit.Interfaces;
 
 namespace FoodFit.Classes
 {
-    internal class UserInput : IUserInput
+    public class UserInput : IUserInput
     {
         private int Age;
         private int Height;

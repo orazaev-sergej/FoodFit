@@ -2,7 +2,7 @@
 
 namespace FoodFit.Classes
 {
-    internal class NutritionCalculator : INutritionCalculator
+    public class NutritionCalculator : INutritionCalculator
     {
         public (double, double, double) CalculateDailyNutrition(IUserInput userInput)
         {

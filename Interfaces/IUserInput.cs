@@ -1,12 +1,12 @@
 ﻿namespace FoodFit.Interfaces
 {
-    enum Sex
+    public enum Sex
     {
         Male,
         Female,
         Undefined
     }
-    internal interface IUserInput
+    public interface IUserInput
     {
         int GetWeight();
         int GetHeight();

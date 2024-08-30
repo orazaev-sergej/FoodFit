@@ -1,6 +1,6 @@
 ﻿namespace FoodFit.Interfaces
 {
-    internal interface ICalorieCalculator
+    public interface ICalorieCalculator
     {
         double CalculateDailyCalories(IUserInput userInput);
     }

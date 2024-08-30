@@ -1,13 +1,13 @@
 ﻿namespace FoodFit.Classes
 {
-    internal class FoodData : IFoodData
+    public class FoodData : IFoodData
     {
         private double calories;
         private double proteins;
         private double fats;
         private double carbohydrates;
 
-        FoodData (double calories, double proteins, double fats, double carbohydrates)
+        public FoodData (double calories, double proteins, double fats, double carbohydrates)
         {
             this.calories = calories;
             this.proteins = proteins;

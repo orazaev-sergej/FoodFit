@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FoodFit
 {
-    internal interface IFoodData
+    public interface IFoodData
     {
         double GetCalories();
         double GetProteins();

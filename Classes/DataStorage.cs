@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace FoodFit.Classes
 {
-    internal class DataStorage : IDataStorage
+    public class DataStorage : IDataStorage
     {
         private List<IFoodData> foodDataList = new List<IFoodData>();
         public IEnumerable<IFoodData> GetFoodData()
@@ -13,7 +13,7 @@ namespace FoodFit.Classes
 
         public void SaveFoodData(IEnumerable<IFoodData> foods)
         {
-            foodDataList.AddRange(foodDataList);
+            foodDataList.AddRange(foods);
         }
     }
 }
