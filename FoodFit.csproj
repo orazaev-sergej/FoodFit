@@ -43,12 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CalorieCalculator.cs" />
+    <Compile Include="Classes\DataStorage.cs" />
     <Compile Include="Classes\FoodData.cs" />
+    <Compile Include="Classes\NutritionCalculator.cs" />
     <Compile Include="Classes\UserInput.cs" />
     <Compile Include="Interfaces\ICalorieCalculator.cs" />
     <Compile Include="Interfaces\IDataStorage.cs" />
     <Compile Include="Interfaces\IFoodData.cs" />
     <Compile Include="Interfaces\IUserInput.cs" />
+    <Compile Include="Interfaces\INutritionCalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

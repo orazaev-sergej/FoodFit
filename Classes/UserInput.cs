@@ -1,36 +1,25 @@
 ﻿using FoodFit.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FoodFit.Classes
 {
     internal class UserInput : IUserInput
     {
-        public UserInput()
+        private int Age;
+        private int Height;
+        private int Weight;
+        private Sex Gender;
+
+        public UserInput(int age, int height, int weight, Sex gender)
         {
+            Age = age;
+            Height = height;
+            Weight = weight;
+            Gender = gender;
         }
 
-        public int GetAge()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int GetGender()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int GetHeight()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int GetWeight()
-        {
-            throw new NotImplementedException();
-        }
+        public int GetAge() => Age;
+        public Sex GetGender() => Gender;
+        public int GetHeight() => Height;
+        public int GetWeight() => Weight;
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FoodFit.Interfaces
+﻿namespace FoodFit.Interfaces
 {
     enum Sex
     {
@@ -17,6 +11,6 @@ namespace FoodFit.Interfaces
         int GetWeight();
         int GetHeight();
         int GetAge();
-        int GetGender();
+        Sex GetGender();
     }
 }
