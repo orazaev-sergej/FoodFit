@@ -45,11 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\CalorieCalculator.cs" />
     <Compile Include="Classes\DataStorage.cs" />
     <Compile Include="Classes\FoodData.cs" />
+    <Compile Include="Classes\GetDataFromUser.cs" />
+    <Compile Include="Classes\ImportData.cs" />
     <Compile Include="Classes\NutritionCalculator.cs" />
     <Compile Include="Classes\UserInput.cs" />
+    <Compile Include="Classes\SaveData.cs" />
     <Compile Include="Interfaces\ICalorieCalculator.cs" />
     <Compile Include="Interfaces\IDataStorage.cs" />
     <Compile Include="Interfaces\IFoodData.cs" />

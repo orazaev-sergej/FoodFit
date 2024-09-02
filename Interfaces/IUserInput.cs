@@ -1,6 +1,6 @@
 ﻿namespace FoodFit.Interfaces
 {
-    public enum Sex
+    public enum Gender
     {
         Male,
         Female,
@@ -11,6 +11,7 @@
         int GetWeight();
         int GetHeight();
         int GetAge();
-        Sex GetGender();
+        Gender GetGender();
+        int GetActivityLevel();
     }
 }
