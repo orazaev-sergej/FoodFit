@@ -1,4 +1,5 @@
 ﻿using FoodFit.Interfaces;
+using System.Xml.Linq;
 
 namespace FoodFit.Classes
 {
@@ -9,7 +10,7 @@ namespace FoodFit.Classes
         private int Fats;
         private int Carbohydrates;
 
-        readonly static UserInput UserInput;
+        private static readonly UserInput UserInput = new UserInput();
         private int Height = UserInput.GetHeight();
         private int Weight = UserInput.GetWeight();
         private int Age = UserInput.GetAge();
@@ -30,6 +31,10 @@ namespace FoodFit.Classes
             }
             //Корректируем на уровень активности
             DailyCalories *= userInput.GetActivityLevel();
+
+            CalculateProteins();
+            CalculateFats();
+            CalculateCarbohydrates();
         }
 
         private void CalculateProteins()

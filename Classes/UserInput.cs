@@ -21,6 +21,10 @@ namespace FoodFit.Classes
             ActivityLevel = activityLevel;
         }
 
+        public UserInput()
+        {
+        }
+
         public string GetUsername() => Username;
         public int GetAge() => Age;
         public Gender GetGender() => Gender;
