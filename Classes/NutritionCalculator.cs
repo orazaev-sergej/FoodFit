@@ -5,56 +5,45 @@ namespace FoodFit.Classes
 {
     public class NutritionCalculator : INutritionCalculator
     {
-        private int DailyCalories;
-        private int Proteins;
-        private int Fats;
-        private int Carbohydrates;
-
-        private static readonly UserInput UserInput = new UserInput();
-        private int Height = UserInput.GetHeight();
-        private int Weight = UserInput.GetWeight();
-        private int Age = UserInput.GetAge();
-        private Gender Gender = UserInput.GetGender();
+        private double DailyCalories;
+        private double proteins;
+        private double fats;
+        private double carbohydrates;
 
         public void CalculateDailyNutrition(IUserInput userInput)
         {
+            int height = userInput.GetHeight();
+            int weight = userInput.GetWeight();
+            int age = userInput.GetAge();
+            Gender gender = userInput.GetGender();
+            double activityLevel = userInput.GetActivityLevel();
+
             // Базовая метаболическая скорость (BMR)
-            if (userInput.GetGender() == Gender.Male)
+            if (gender == Gender.Male)
             {
-                DailyCalories = 88 + (13 * userInput.GetWeight()) +
-                    (5 * userInput.GetHeight()) - (5 * userInput.GetAge());
+                DailyCalories = 88 + (13 * weight) +
+                    (5 * height) - (5 * age);
             }
             else
             {
-                DailyCalories = 448 + (9 * userInput.GetWeight()) +
-                    (3 * userInput.GetHeight()) - (4 * userInput.GetAge());
+                DailyCalories = 448 + (9 * weight) +
+                    (3 * height) - (4 * age);
             }
             //Корректируем на уровень активности
-            DailyCalories *= userInput.GetActivityLevel();
+            DailyCalories *= (int)activityLevel;
 
-            CalculateProteins();
-            CalculateFats();
-            CalculateCarbohydrates();
+            CalculateProteins(weight);
+            CalculateFats(weight);
+            CalculateCarbohydrates(weight);
         }
 
-        private void CalculateProteins()
-        {
-            Proteins = (int)(Weight * 1.8); // 1.8 грамма на кг веса тела
-        }
+        private void CalculateProteins(int weight) => proteins = weight * 1.8;
+        private void CalculateFats(int weight) => fats = weight * 0.9;
+        private void CalculateCarbohydrates(int weight) => carbohydrates = weight * 2.5;
 
-        private void CalculateFats()
-        {
-            Fats = (int)(Weight * 0.9); // 0.9 грамма на кг веса тела
-        }
-
-        private void CalculateCarbohydrates()
-        {
-            Carbohydrates = (int)(Weight * 2.5); // 2.5 грамма на кг веса тела
-        }
-
-        public int GetProteins() => Proteins;
-        public int GetFats() => Fats;
-        public int GetCarbohydrates() => Carbohydrates;
-        public int GetDailyCalories() => DailyCalories;
+        public double GetProteins() => proteins;
+        public double GetFats() => fats;
+        public double GetCarbohydrates() => carbohydrates;
+        public double GetDailyCalories() => DailyCalories;
     }
 }
