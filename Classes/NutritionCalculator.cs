@@ -1,4 +1,5 @@
 ﻿using FoodFit.Interfaces;
+using System;
 using System.Xml.Linq;
 
 namespace FoodFit.Classes
@@ -19,27 +20,34 @@ namespace FoodFit.Classes
 
         public void CalculateDailyNutrition()
         {
-            int height = userInput.GetHeight();
-            int weight = userInput.GetWeight();
-            int age = userInput.GetAge();
-            Gender gender = userInput.GetGender();
-            double activityLevel = userInput.GetActivityLevel();
-
-            // Basal Metabolic Rate (BMR)
-            if (gender == Gender.Male)
+            try
             {
-                dailyCalories = 88 + (13 * weight) + (5 * height) - (5 * age);
-            }
-            else
-            {
-                dailyCalories = 448 + (9 * weight) + (3 * height) - (4 * age);
-            }
-            //Adjust for activity level
-            dailyCalories *= activityLevel;
+                int height = userInput.GetHeight();
+                int weight = userInput.GetWeight();
+                int age = userInput.GetAge();
+                Gender gender = userInput.GetGender();
+                double activityLevel = userInput.GetActivityLevel();
 
-            CalculateProteins(weight);
-            CalculateFats(weight);
-            CalculateCarbohydrates(weight);
+                // Basal Metabolic Rate (BMR)
+                if (gender == Gender.Male)
+                {
+                    dailyCalories = 88 + (13 * weight) + (5 * height) - (5 * age);
+                }
+                else
+                {
+                    dailyCalories = 448 + (9 * weight) + (3 * height) - (4 * age);
+                }
+                //Adjust for activity level
+                dailyCalories *= activityLevel;
+
+                CalculateProteins(weight);
+                CalculateFats(weight);
+                CalculateCarbohydrates(weight);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("An error occured: " + ex.Message);
+            }
         }
 
         private void CalculateProteins(int weight) => proteins = weight * 1.8;

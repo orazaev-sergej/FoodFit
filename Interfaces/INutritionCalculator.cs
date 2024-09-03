@@ -2,7 +2,7 @@
 {
     public interface INutritionCalculator
     {
-        void CalculateDailyNutrition(IUserInput userInput);
+        void CalculateDailyNutrition();
         double GetProteins();
         double GetFats();
         double GetCarbohydrates();
