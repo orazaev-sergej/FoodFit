@@ -11,7 +11,7 @@ namespace FoodFit.Classes
         private Gender Gender;
         private int ActivityLevel;
 
-        private UserInput(string username, int age, int height, int weight, Gender gender, int activityLevel)
+        public UserInput(string username, int age, int height, int weight, Gender gender, int activityLevel)
         {
             Username = username;
             Age = age;
@@ -19,10 +19,6 @@ namespace FoodFit.Classes
             Weight = weight;
             Gender = gender;
             ActivityLevel = activityLevel;
-        }
-
-        public UserInput()
-        {
         }
 
         public string GetUsername() => Username;

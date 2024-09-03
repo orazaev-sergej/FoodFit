@@ -16,7 +16,7 @@ namespace FoodFit.Classes
         private int Age = UserInput.GetAge();
         private Gender Gender = UserInput.GetGender();
 
-        private void CalculateDailyNutrition(IUserInput userInput)
+        public void CalculateDailyNutrition(IUserInput userInput)
         {
             // Базовая метаболическая скорость (BMR)
             if (userInput.GetGender() == Gender.Male)
