@@ -138,6 +138,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\FoodDataTests.cs" />
+    <Compile Include="Tests\NutritionCalculatorTests.cs" />
+    <Compile Include="Tests\SaveToFileTests.cs" />
+    <Compile Include="Tests\UserInputTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
