@@ -13,8 +13,11 @@ namespace FoodFit
     {
         static void Main(string[] args)
         {
+            GetDataFromUser getDataFromUser = new GetDataFromUser();
+            getDataFromUser.GetData();
 
-
+            SaveData saveData = new SaveData();
+            saveData.SaveToFile();
         }
     }
 }

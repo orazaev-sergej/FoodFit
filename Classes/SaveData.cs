@@ -14,12 +14,14 @@ namespace FoodFit.Classes
         readonly UserInput UserInput;
         readonly NutritionCalculator Nutrition;
 
-        public void ExportDataToFile(string FileName)
+        private void ExportDataToFile(string FileName)
         {
             string data = $"Имя: {UserInput.GetUsername()}\nВозраст: {UserInput.GetAge()}\n" +
                 $"Рост: {UserInput.GetHeight()} см\nВес: {UserInput.GetWeight()} кг\nКалории: {Nutrition.GetDailyCalories()}\n" +
                 $"Белки: {Nutrition.GetProteins()}г\nЖиры: {Nutrition.GetFats()}г\nУглеводы: {Nutrition.GetCarbohydrates()}г";
             File.WriteAllText(FileName, data);
         }
+
+        public void SaveToFile() => ExportDataToFile(FileName);
     }
 }
