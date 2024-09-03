@@ -21,8 +21,7 @@ namespace FoodFit.Classes
             // Базовая метаболическая скорость (BMR)
             if (gender == Gender.Male)
             {
-                DailyCalories = 88 + (13 * weight) +
-                    (5 * height) - (5 * age);
+                DailyCalories = 88 + (13 * weight) + (5 * height) - (5 * age);
             }
             else
             {
