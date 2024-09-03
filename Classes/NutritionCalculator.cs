@@ -5,12 +5,19 @@ namespace FoodFit.Classes
 {
     public class NutritionCalculator : INutritionCalculator
     {
-        private double DailyCalories;
+        private double dailyCalories;
         private double proteins;
         private double fats;
         private double carbohydrates;
 
-        public void CalculateDailyNutrition(IUserInput userInput)
+        private readonly IUserInput userInput;
+
+        public NutritionCalculator(IUserInput userInput)
+        {
+            this.userInput = userInput;
+        }
+
+        public void CalculateDailyNutrition()
         {
             int height = userInput.GetHeight();
             int weight = userInput.GetWeight();
@@ -18,18 +25,17 @@ namespace FoodFit.Classes
             Gender gender = userInput.GetGender();
             double activityLevel = userInput.GetActivityLevel();
 
-            // Базовая метаболическая скорость (BMR)
+            // Basal Metabolic Rate (BMR)
             if (gender == Gender.Male)
             {
-                DailyCalories = 88 + (13 * weight) + (5 * height) - (5 * age);
+                dailyCalories = 88 + (13 * weight) + (5 * height) - (5 * age);
             }
             else
             {
-                DailyCalories = 448 + (9 * weight) +
-                    (3 * height) - (4 * age);
+                dailyCalories = 448 + (9 * weight) + (3 * height) - (4 * age);
             }
-            //Корректируем на уровень активности
-            DailyCalories *= (int)activityLevel;
+            //Adjust for activity level
+            dailyCalories *= activityLevel;
 
             CalculateProteins(weight);
             CalculateFats(weight);
@@ -43,6 +49,6 @@ namespace FoodFit.Classes
         public double GetProteins() => proteins;
         public double GetFats() => fats;
         public double GetCarbohydrates() => carbohydrates;
-        public double GetDailyCalories() => DailyCalories;
+        public double GetDailyCalories() => dailyCalories;
     }
 }
