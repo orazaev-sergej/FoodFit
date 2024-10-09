@@ -82,6 +82,10 @@
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.0\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -128,6 +132,10 @@
     <Compile Include="Classes\GetDataFromUser.cs" />
     <Compile Include="Classes\ImportData.cs" />
     <Compile Include="Classes\NutritionCalculator.cs" />
+    <Compile Include="Classes\TcpClient.cs" />
+    <Compile Include="Classes\TcpServer.cs" />
+    <Compile Include="Classes\UdpClient.cs" />
+    <Compile Include="Classes\UdpServer.cs" />
     <Compile Include="Classes\UserInput.cs" />
     <Compile Include="Classes\SaveData.cs" />
     <Compile Include="Interfaces\ICalorieCalculator.cs" />
